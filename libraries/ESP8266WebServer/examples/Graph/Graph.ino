@@ -278,7 +278,7 @@ void loop(void) {
   }
 
   // see if one second has passed since last change, otherwise stop here
-  if(!timeToChange) {
+  if (!timeToChange) {
     return;
   }
 
