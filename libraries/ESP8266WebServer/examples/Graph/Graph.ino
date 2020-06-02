@@ -182,7 +182,7 @@ void setup(void) {
 
   fileSystemConfig.setAutoFormat(false);
   fileSystem->setConfig(fileSystemConfig);
-  boolean fsOK = fileSystem->begin();
+  bool fsOK = fileSystem->begin();
   DBG_OUTPUT_PORT.println(fsOK ? F("Filesystem initialized.") : F("Filesystem init failed!"));
 
   ////////////////////////////////
@@ -266,7 +266,7 @@ unsigned int defaultMask() {
 int rgbMode = 1; // 0=off - 1=auto - 2=manual
 int rgbValue = 0;
 long lastChangeTime = 0;
-boolean modeChangeRequested = false;
+bool modeChangeRequested = false;
 
 void loop(void) {
   server.handleClient();
